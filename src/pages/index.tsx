@@ -7,11 +7,19 @@ export default function Home() {
       <Head>
         <title>Board - Organizando suas tarefas.</title>
       </Head>
-      <div>
-        <h1 className={styles.title}>
-          Primeiro projeto com <span>NextJS</span>
-        </h1>
-      </div>
+      <main className={styles.contentContainer}>
+        <img src="/images/board-user.svg" alt="Ferramenta board" />
+        <section className={styles.callToAction}>
+          <h1>Uma ferramenta para o seu dia. Escreva, planeje e organize-se.</h1>
+          <p>
+            <span>100% gratuito</span> e online.
+          </p>
+        </section>
+
+        <div className={styles.donaters}>
+        <img src="https://avatars.githubusercontent.com/u/11899797?s=96&v=4" alt="Usuário 1" />
+        </div>
+      </main>
     </>
   );
 }
