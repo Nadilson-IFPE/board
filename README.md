@@ -8,8 +8,8 @@ Para executar o app localmente, use um dos comandos a seguir em qualquer termina
 
 ```bash
 npm run dev
-# or
+# ou
 yarn dev
 ```
 
-e abra o endereço [http://localhost:3000](http://localhost:3000) no seu navegador.
+e abra o endereço [http://localhost:3000](http://localhost:3000) no seu navegador preferido.
