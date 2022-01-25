@@ -1,0 +1,118 @@
+.container {
+    max-width: 1120px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #17181F;
+    border-radius: 6px;
+
+    form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        input {
+            width: 90%;
+            height: 50px;
+            background-color: #20212C;
+            border: 1 px solid #424242;
+            border-radius: 6px;
+            padding: 3px 10px;
+            color: #FFF;
+        }
+
+        button {
+            margin-left: 10px;
+            width: 8%;
+            height: 50px;
+            border: 0;
+            background-color: #FFB800;
+            border-radius: 6px;
+        }
+    }
+
+    h1 {
+        color: #FFF;
+        margin-top: 1.8rem;
+    }
+}
+
+.taskList {
+    background-color: #20212C;
+    margin: 1rem 0;
+    padding: 0.7rem;
+    border-radius: 6px;
+
+    p {
+        cursor: pointer;
+        color: #F2F6FC;
+        font-size: 1rem;
+        line-height: 150%;
+    }
+
+    .actions {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 1rem;
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            time {
+                color: #FFB800;
+                margin-left: 5px;
+                margin-right: 1rem;
+            }
+        }
+
+        button {
+            background: transparent;
+            border: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & + button {
+                margin-left: 10px;
+            }
+
+            span {
+                margin-left: 5px;
+                color: #FFF;
+                cursor: pointer;
+            }
+
+            span:hover {
+                filter: brightness(0.7);
+            }
+        }
+    }
+}
+
+.vipContainer {
+    max-width: 1120px;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: #17181F;
+    border-radius: 6px;
+
+    h3 {
+        color: #FFB800;
+        font-size: 2rem;
+    }
+
+    div {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+
+        time {
+            color: #FFF;
+            font-size: 1.4rem;
+            padding: 10px;
+        }
+    }
+}
