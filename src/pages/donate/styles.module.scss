@@ -1,0 +1,48 @@
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: calc(100vh - 6rem);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  h1 {
+    margin: 1rem 0;
+    font-size: 2.3rem;
+  }
+
+  h3 {
+    margin-bottom: 1rem;
+
+    span {
+      font-weight: bold;
+      color: #019950;
+    }
+  }
+
+  strong {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    background-color: #eee;
+    padding: 0.8rem;
+  }
+
+  .vip {
+    margin-top: 1.5rem;
+    background-color: #019950;
+    padding: 1rem;
+    border-radius: 5px;
+    color: #fff;
+
+    img {
+      width: 50px;
+      height: 50px;
+      vertical-align: middle;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+  }
+}
