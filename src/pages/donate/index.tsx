@@ -5,6 +5,8 @@ import { getSession } from "next-auth/client";
 import { PayPalButtons } from "@paypal/react-paypal-js";
 import firebase from "./../../services/firebaseConnection";
 import { useState } from "react";
+import Image from "next/image";
+import rocketImg from "../../../public/images/rocket.svg";
 
 interface DonateProps {
   user: {
@@ -38,18 +40,23 @@ export default function Donate({ user }: DonateProps) {
         <title>Ajude a plataforma Board a permanecer online</title>
       </Head>
       <main className={styles.container}>
-        <img src="/images/rocket.svg" alt="Seja Apoiador" />
+        <Image src={rocketImg} alt="Seja um Apoiador" />
 
         {vip && (
           <div className={styles.vip}>
-            <img src={user.image} alt="Foto do perfil do apoiador" />
+            <Image
+              width={50}
+              height={50}
+              src={user.image}
+              alt="Foto do perfil do apoiador"
+            />
             <span>Parabéns! Você é um novo apoiador.</span>
           </div>
         )}
 
         <h1>Seja um apoiador do projeto 🏆</h1>
         <h3>
-          Contribua com apenas <span>R$ 1,00</span>
+          Contribua com apenas <span>R$ 5,00</span>
         </h3>
         <strong>
           Apareça na nossa Home e tenha funcionalidades exclusivas.
@@ -61,7 +68,7 @@ export default function Donate({ user }: DonateProps) {
               purchase_units: [
                 {
                   amount: {
-                    value: "1",
+                    value: "5",
                   },
                 },
               ],
@@ -72,6 +79,14 @@ export default function Donate({ user }: DonateProps) {
               console.log("Compra aprovada: " + details.payer.name.given_name);
               handleSaveDonate();
             });
+          }}
+          // No meu Firefox está dando o erro "Error: Detected popup close"
+          // ao fechar o popup sem realizar a transação (em modo de produção).
+          // Então, adicionei tratamento de erro básico para evitar que o site
+          // mostre uma janela descrevendo o erro, o que dificulta a visualização
+          // até que o usuário atualize a página:
+          onError={function (err) {
+            console.log("Erro: ", err);
           }}
         />
       </main>

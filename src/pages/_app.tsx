@@ -7,7 +7,7 @@ import "../styles/global.scss";
 import { Provider as NextAuthProvider } from "next-auth/client";
 
 const initialOptions = {
-  "client-id": process.env.NEXT_PUBLIC_PAYPAL_CLIENT_ID,
+  "client-id": process.env.NEXT_PUBLIC_PAYPAL_PROD_CLIENT_ID,
   currency: "BRL",
   intent: "capture",
 };
